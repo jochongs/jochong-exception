@@ -1,9 +1,13 @@
 class Exception {
     err;
     status;
+    name;
     message;
 
-    constructor(err) {
+    constructor(status, name, message, err) {
+        this.status = status;
+        this.name = name;
+        this.message = message;
         this.err = err;
     }
 }
