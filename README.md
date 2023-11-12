@@ -19,9 +19,15 @@ app.get('/', (req, res, next) => {
     if (err) {
         return next(new InternalServerErrorException('Unexpected Error Occured.', err))
     }
+
+    // Do Something...
 });
 
 app.use((err, req, res, next) => {
-    res.status(err.status).end();
+    if (err instanceof Exception) {
+        res.status(err.status).end();
+    }
+
+    // Do Something...
 });
 ```
