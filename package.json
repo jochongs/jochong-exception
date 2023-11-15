@@ -8,5 +8,11 @@
   "repository": {
     "type": "github",
     "url": "https://github.com/jochongs/jochong-exception"
+  },
+  "devDependencies": {
+    "release-it": "^17.0.0"
+  },
+  "scripts": {
+    "release": "release-it"
   }
 }
