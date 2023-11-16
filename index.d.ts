@@ -3,10 +3,10 @@ type Err = any
 export class Exception {
     constructor(status: number, name: string, message: string, err: Err)
 
-    err: Err;
-    status: number;
-    message: string;
-    name: string;
+    public err: Err;
+    public status: number;
+    public message: string;
+    public name: string;
 }
 
 export class BadRequestException extends Exception {
