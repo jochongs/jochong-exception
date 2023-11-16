@@ -1,4 +1,4 @@
-type Err = null | object | string
+type Err = any
 
 export class Exception {
     constructor(status: number, name: string, message: string, err: Err)
