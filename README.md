@@ -20,7 +20,7 @@ new BadRequestException('title');
 const { InternalServerErrorException } = require('jochong-exception');
 
 if (err) {
-    //default message false
+    // include err
     return new InternalServerErrorException('Unexpected Error Occured.', err);
 }
 ```
