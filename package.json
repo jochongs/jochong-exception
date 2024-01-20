@@ -1,6 +1,6 @@
 {
   "name": "jochong-exception",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "description": "exception class for jochong",
   "main": "index.js",
   "author": "jochong",
