@@ -8,10 +8,12 @@ npm i jochong-exception
 
 You can create HTTP exception.
 
+The second parameter is a place for error.
+
 ```javascript
 const { BadRequestException } = require('jochong-exception');
 
-new BadRequestException(null, 'title');
+new BadRequestException('title');
 ```
 
 ```javascript
@@ -19,21 +21,20 @@ const { InternalServerErrorException } = require('jochong-exception');
 
 if (err) {
     //default message false
-    return new InternalServerErrorException(err, 'Unexpected Error Occured.', false);
+    return new InternalServerErrorException('Unexpected Error Occured.', err);
 }
 ```
-The first parameter is a place for error.
 
 ```javascript
-return new BadRequestException(null, { reason: 'email' });
+return new BadRequestException({ reason: 'email' });
 ```
-Also, the second parameter may contain an object.
+Also, the first parameter may contain an object.
 
 When inserting a character string, you can receive a response with a 'message' as a key value.
 
 ### In Express
 ```javascript
-const { BadRequestException } = require('jochong-exception');
+const { BadRequestException, Exception } = require('jochong-exception');
 const app = express();
 
 app.use((err, req, res, next) => {
