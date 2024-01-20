@@ -3,7 +3,7 @@ type Err = any;
 export class Exception {
     constructor(status: number, message: string, err?: Err);
 
-    public err: Err;
+    public err: Err | null;
     public status: number;
     public message: string;
 }
