@@ -1,11 +1,11 @@
 type Err = any;
 
 export class Exception {
-    constructor(status: number, message: string, err?: Err);
+    constructor(status: number, response: any, err?: Err);
 
     public err: Err | null;
     public status: number;
-    public message: string;
+    public response: any;
 }
 
 export class BadRequestException extends Exception {
